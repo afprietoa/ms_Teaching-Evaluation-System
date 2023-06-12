@@ -18,7 +18,9 @@ import java.util.List;
 @Table(name = "choices")
 public class Choices implements Serializable {
     @Id
+    @Column(name = "idOption")
     private Integer idOption;
+    @Column(name = "optionText")
     private String optionText;
 
     @ManyToMany

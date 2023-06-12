@@ -17,7 +17,9 @@ import java.io.Serializable;
 @Table(name = "openAnswer")
 public class OpenAnswer implements Serializable {
     @Id
+    @Column(name = "idOpenAnswer")
     private Integer idOpenAnswer;
+    @Column(name = "answerText")
     private String answerText;
 
     @ManyToOne

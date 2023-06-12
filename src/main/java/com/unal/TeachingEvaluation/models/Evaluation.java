@@ -19,8 +19,11 @@ import java.util.List;
 @Table(name = "evaluation")
 public class Evaluation implements Serializable {
     @Id
+    @Column(name = "idEvaluation")
     private Integer idEvaluation;
+    @Column(name = "timeStamp")
     private Date timeStamp;
+    @Column(name = "semester")
     private String semester;
 
     @ManyToMany

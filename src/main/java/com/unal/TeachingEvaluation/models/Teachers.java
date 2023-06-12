@@ -18,12 +18,19 @@ import java.util.List;
 @Table(name = "teachers")
 public class Teachers implements Serializable {
     @Id
+    @Column(name = "idTeacher")
     private Integer idTeacher;
+    @Column(name = "name")
     private String name;
+    @Column(name = "email")
     private String email;
+    @Column(name = "dedicationTime")
     private Integer dedicationTime;
+    @Column(name = "academicLevel")
     private String academicLevel;
+    @Column(name = "department")
     private String department;
+    @Column(name = "activeStatus")
     private String activeStatus;
 
     @OneToOne(mappedBy = "teachers")

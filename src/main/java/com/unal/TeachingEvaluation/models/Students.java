@@ -18,13 +18,21 @@ import java.util.List;
 @Table(name = "students")
 public class Students implements Serializable {
     @Id
+    @Column(name = "idStudent")
     private Integer idStudent;
+    @Column(name = "name")
     private String name;
+    @Column(name = "email")
     private String email;
+    @Column(name = "gender")
     private String gender;
+    @Column(name = "curricularProgram")
     private String curricularProgram;
+    @Column(name = "department")
     private String department;
+    @Column(name = "activeStatus")
     private String activeStatus;
+    @Column(name = "evalBool")
     private String evalBool;
 
     @OneToOne(mappedBy = "students")

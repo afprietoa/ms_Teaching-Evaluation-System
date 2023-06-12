@@ -18,8 +18,11 @@ import java.util.List;
 @Table(name = "courses")
 public class Courses implements Serializable {
     @Id
+    @Column(name = "idCourse")
     private Integer idCourse;
+    @Column(name = "name")
     private String name;
+    @Column(name = "creditNumber")
     private Integer creditNumber;
 
     @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "courses")

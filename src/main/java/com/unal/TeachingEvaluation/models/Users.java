@@ -19,9 +19,14 @@ import java.io.Serializable;
 @Table(name = "users")
 public class Users implements Serializable {
     @Id
+    @Column(name = "idUser")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idUser;
+    @Column(name = "username")
     private String username;
+    @Column(name = "password")
     private String password;
+    @Column(name = "role")
     private String role;
 
     @OneToOne(mappedBy = "users")
