@@ -49,7 +49,7 @@ public class EvaluationService {
      * @return
      */
     public Optional<Evaluation> showByDate(String date){
-        Optional<Evaluation> result = this.evaluationRepository.findByDate(date);
+        Optional<Evaluation> result = this.evaluationRepository.findByTimeStamp(date);
         if(result.isEmpty())
             throw new ResponseStatusException(HttpStatus.NOT_FOUND,
                     "The requested evaluation.date does not exists.");

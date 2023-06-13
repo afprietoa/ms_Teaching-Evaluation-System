@@ -23,10 +23,12 @@ public class ClosedAnswer implements Serializable {
     @ManyToOne
     @JoinColumn(name="idStudent")
     @JsonIgnoreProperties("closedAnswer")
-    private Students student;
+    private Students students;
 
     @ManyToOne
     @JoinColumn(name="idOption")
     @JsonIgnoreProperties("closedAnswer")
-    private Choices choice;
+    private Choices choices;
+
+
 }

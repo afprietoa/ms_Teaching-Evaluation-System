@@ -35,7 +35,7 @@ public class Teachers implements Serializable {
 
     @OneToOne(mappedBy = "teachers")
     @JsonIgnoreProperties("teachers")
-    private Users user;
+    private Users users;
 
     @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "teachers")
     @JsonIgnoreProperties("teachers")

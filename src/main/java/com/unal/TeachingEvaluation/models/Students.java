@@ -37,7 +37,7 @@ public class Students implements Serializable {
 
     @OneToOne(mappedBy = "students")
     @JsonIgnoreProperties("students")
-    private Users user;
+    private Users users;
 
     @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "students")
     @JsonIgnoreProperties("students")
@@ -46,4 +46,9 @@ public class Students implements Serializable {
     @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "students")
     @JsonIgnoreProperties("students")
     private List<ClosedAnswer> closedAnswers;
+
+    @ManyToOne
+    @JoinColumn(name="idCourse")
+    @JsonIgnoreProperties("students")
+    private Courses courses;
 }

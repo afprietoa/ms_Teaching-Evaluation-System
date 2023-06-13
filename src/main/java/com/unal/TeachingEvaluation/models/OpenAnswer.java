@@ -24,11 +24,11 @@ public class OpenAnswer implements Serializable {
 
     @ManyToOne
     @JoinColumn(name="idQuestion")
-    @JsonIgnoreProperties("openAnswer")
-    private Questions question;
+    @JsonIgnoreProperties("openAnswers")
+    private Questions questions;
 
     @ManyToOne
     @JoinColumn(name="idStudent")
     @JsonIgnoreProperties("openAnswer")
-    private Students student;
+    private Students students;
 }

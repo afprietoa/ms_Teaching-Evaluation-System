@@ -37,8 +37,8 @@ public class Evaluation implements Serializable {
 
     @ManyToOne
     @JoinColumn(name="idTeacher")
-    @JsonIgnoreProperties("evaluation")
-    private Teachers teacher;
+    @JsonIgnoreProperties("evaluations")
+    private Teachers teachers;
 
     @ManyToOne
     @JoinColumn(name="idCourse")

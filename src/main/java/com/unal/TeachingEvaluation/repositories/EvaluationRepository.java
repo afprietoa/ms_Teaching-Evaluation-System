@@ -2,13 +2,16 @@ package com.unal.TeachingEvaluation.repositories;
 
 import com.unal.TeachingEvaluation.models.Evaluation;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
 public interface EvaluationRepository extends JpaRepository<Evaluation, Integer> {
-    Optional<Evaluation> findByDate(String date);
+
+    Optional<Evaluation> findByTimeStamp(String date);
 
     Optional<Evaluation> findBySemester(String semester);
 }

@@ -29,13 +29,13 @@ public class Users implements Serializable {
     @Column(name = "role")
     private String role;
 
-    @OneToOne(mappedBy = "users")
-    @JsonIgnoreProperties("users")
-    private Students student;
+    @OneToOne
+    @MapsId
+    private Students students;
 
-    @OneToOne(mappedBy = "users")
-    @JsonIgnoreProperties("users")
-    private Teachers teacher;
+    @OneToOne
+    @MapsId
+    private Teachers teachers;
 
 
 }

@@ -32,4 +32,8 @@ public class Choices implements Serializable {
     @JsonIgnoreProperties("choices")
     private List<Questions> questions;
 
+    @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "choices")
+    @JsonIgnoreProperties("choices")
+    private List<ClosedAnswer> closedAnswers;
+
 }
